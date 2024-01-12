@@ -3185,6 +3185,7 @@
             "time": "2023-11-08T05:53:05+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "spatie/db-dumper",
             "version": "3.4.2",
             "source": {
@@ -3633,6 +3634,17 @@
             },
             "dist": {
                 "type": "zip",
+=======
+            "name": "symfony/console",
+            "version": "v6.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "0254811a143e6bc6c8deea08b589a7e68a37f625"
+            },
+            "dist": {
+                "type": "zip",
+>>>>>>> a2c67fbf46beab3a9fb2f967c734d5782d6c248a
                 "url": "https://api.github.com/repos/symfony/console/zipball/0254811a143e6bc6c8deea08b589a7e68a37f625",
                 "reference": "0254811a143e6bc6c8deea08b589a7e68a37f625",
                 "shasum": ""
