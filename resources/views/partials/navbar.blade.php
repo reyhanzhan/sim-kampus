@@ -8,7 +8,7 @@
         .form-registration {
             width: 500px;
             box-sizing: border-box;
-            background: rgba(247, 245, 245);
+            background: rgba(188, 255, 107, 0.592);
             padding: 40px;
             border-radius: 20px;
             /* color: rgb(255, 238, 0); */
@@ -17,7 +17,7 @@
         .form-signin {
             width: 500px;
             box-sizing: border-box;
-            background: rgba(247, 245, 245);
+            background: rgba(188, 255, 107, 0.592);
             padding: 40px;
             border-radius: 20px;
             /* color: rgb(255, 238, 0); */
