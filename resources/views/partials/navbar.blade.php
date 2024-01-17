@@ -30,6 +30,7 @@
             -webkit-background-size: cover;
             background-size: cover;
         }
+        
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -38,6 +39,7 @@
         SIM kampus
       </a>
         <div class="collapse navbar-collapse" id="navbarNav">
+          @auth
           <div class="dropdown ">
             <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
               Portal
@@ -67,7 +69,21 @@
               <a class="dropdown-item" href="/semester">Semester</a>
             </div>
           </div>
-  
+
+          <div class="dropdown ">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              Referensi
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="agama">Agama</a>
+              <a class="dropdown-item" href="periode">Periode</a>
+              <a class="dropdown-item" href="unit">Unit</a>
+              <a class="dropdown-item" href="sistem">Sistem Kuliah</a>
+              <a class="dropdown-item" href="status">Status Mahasiswa</a>
+            </div>
+          </div>
+          @endauth
+
             <ul class="navbar-nav justify-content-end container-fluid">
                 @auth
                     <li class="nav-item dropdown">
