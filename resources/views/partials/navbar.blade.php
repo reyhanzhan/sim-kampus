@@ -33,43 +33,60 @@
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="/">
-        <img src="https://djoealan.files.wordpress.com/2009/02/logo-uwp1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-        SIM kampus
-      </a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="dropdown ">
-            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-              Portal
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="/mahasiswa">Mahasiswa</a>
-              <a class="dropdown-item" href="/dosen">Dosen</a>
-            </div>
-          </div>
-  
-          <div class="dropdown ">
-            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-              Perkuliahan
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="/matkul">Mata Kuliah</a>
-              <a class="dropdown-item" href="/kelas">Kelas</a>
-            </div>
-          </div>
-  
-          <div class="dropdown ">
-            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-              Laporan
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="/krs">Krs</a>
-              <a class="dropdown-item" href="/semester">Semester</a>
-            </div>
-          </div>
-  
-            <ul class="navbar-nav justify-content-end container-fluid">
-                @auth
+
+      @auth
+      <div class="collapse navbar-collapse" id="navbarNav"
+          <a class="navbar-brand" href="/">
+            <img src="https://djoealan.files.wordpress.com/2009/02/logo-uwp1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            SIM kampus
+          </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="dropdown ">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                  Portal
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/mahasiswa">Mahasiswa</a>
+                  <a class="dropdown-item" href="/dosen">Dosen</a>
+                </div>
+              </div>
+      
+              <div class="dropdown ">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                  Perkuliahan
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/matkul">Mata Kuliah</a>
+                  <a class="dropdown-item" href="/kelas">Kelas</a>
+                </div>
+              </div>
+      
+              <div class="dropdown ">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                  Laporan
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/krs">Krs</a>
+                  <a class="dropdown-item" href="/semester">Semester</a>
+                </div>
+              </div>
+
+              <div class="dropdown ">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                  Referensi
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/agama">Agama</a>
+                  <a class="dropdown-item" href="/periode">Periode</a>
+                  <a class="dropdown-item" href="/unit">Unit</a>
+                  <a class="dropdown-item" href="/sistemkuliah">Sistem Kuliah</a>
+                  <a class="dropdown-item" href="/statusmahasiswa">Status Mahasiswa</a>
+                </div>
+              </div>
+      @endauth
+      @auth
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav justify-content-end container-fluid">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,24 +96,27 @@
                             <a class="dropdown-item" href="/dashboard"><i
                                     class="bi bi-layout-text-sidebar-reverse"></i>Dashboard</a>
                             <div class="dropdown-divider"></div>
-  
+
                             <form action="/logout" method="POST">
                                 @csrf
                                 <button type="submit" class="dropdown-item"><i
                                         class="bi bi-box-arrow-right"></i>Logout</button>
                             </form>
-  
+
                         </div>
                     </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link {{ 'Login' ? 'active' : '' }}" href="/login"><i
-                                class="bi bi-box-arrow-in-right"></i> Login</a>
-                    </li>
-                @endauth
-            </ul>
-  
-        </div>
+                </ul>
+              </div>
+            @else
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav justify-content-end container-fluid">
+                <li class="nav-item">
+                    <a class="nav-link {{ 'Login' ? 'active' : '' }}" href="/login"><i
+                            class="bi bi-box-arrow-in-right"></i> Login</a>
+                </li>
+                </ul>
+            </div>
+    @endauth
     </div>
   </nav>
   

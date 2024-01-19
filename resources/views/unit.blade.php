@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('container')
-<h1>hlmn home</h1>
+<h1>hlmn unit</h1>
 @endsection
