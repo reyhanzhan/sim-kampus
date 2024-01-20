@@ -34,10 +34,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
 
-      
-      
-
-
             {{-- auth halaman --}}
             @auth
             <div class="collapse navbar-collapse" id="navbarNav">

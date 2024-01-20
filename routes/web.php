@@ -1,10 +1,12 @@
 <?php
 
 
-use App\Http\Controllers\ReferensiController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AgamaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ReferensiController;
+use App\Http\Controllers\StatusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,29 +58,69 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 
 
-Route::get('/agama', [ReferensiController::class, 'agama'])->middleware('auth');
+// Route::get('/agama', [ReferensiController::class, 'agama'])->middleware('auth');
 Route::get('/periode', [ReferensiController::class, 'periode'])->middleware('auth');
 Route::get('/unit', [ReferensiController::class, 'unit'])->middleware('auth');
 Route::get('/sistem', [ReferensiController::class, 'sistem'])->middleware('auth');
 Route::get('/status', [ReferensiController::class, 'status'])->middleware('auth');
 
-// referensi
-// Route::get('/agama', function(){
-//     return view('menu.agama');
-// })->middleware('auth');
+/**
+ * CRUD hlmn agama
+ * pakai query builder
+ */
+Route::get('/agama/tampil', [AgamaController::class, 'index'])->middleware('auth');
+// create data
+// menuju ke form tambah data
+Route::get('/agama/tampil', [AgamaController::class,'create'])->middleware('auth');
 
-// Route::get('/periode', function(){
-//     return view('menu.periode');
-// })->middleware('auth');
+// masukkan data ke db
+Route::post('/agama/tampil',[AgamaController::class, 'store'])->middleware('auth');
 
-// Route::get('/unit', function(){
-//     return view('menu.unit');
-// })->middleware('auth');
+// read data
+Route::get('/agama',[AgamaController::class,'tampil'])->middleware('auth');
 
-// Route::get('/sistem', function(){
-//     return view('menu.sistem');
-// })->middleware('auth');
+// detail data berdasarkan id param
+Route::get('/agama/{id}',[AgamaController::class,'show'])->middleware('auth');
 
-// Route::get('/status', function(){
-//     return view('menu.status');
-// })->middleware('auth');
+// edit data
+Route::get('/agama{id}/edit', [AgamaController::class,'edit'])->middleware('auth');
+
+// update data di db berdasarkan id
+
+Route::put('/agama/{id}', [AgamaController::class,'update'])->middleware('auth');
+
+// delete data
+Route::delete('/agama/{id}', [AgamaController::class,'destroy'])->middleware('auth');
+// Route::resource('agama',AgamaController::class)->middleware('auth');
+
+
+
+/**
+ * CRUD HLMN STATUS
+ */
+// Route::resource('status', StatusController::class)->middleware('auth');
+// Route::get('/status/tampil', [StatusController::class, 'index'])->middleware('auth');
+// create data
+// menuju ke form tambah data
+Route::get('/status/tampil', [StatusController::class,'create'])->middleware('auth');
+
+// masukkan data ke db
+Route::post('/status/tampil',[StatusController::class, 'store'])->middleware('auth');
+
+// read data
+Route::get('/status',[StatusController::class,'tampil'])->middleware('auth');
+
+// detail data berdasarkan id param
+Route::get('/status/{status}',[StatusController::class,'show'])->middleware('auth');
+
+// edit data
+Route::get('/status{status}/edit', [StatusController::class,'edit'])->middleware('auth');
+
+// update data di db berdasarkan id
+
+Route::put('/status/{status}', [StatusController::class,'update'])->middleware('auth');
+
+// delete data
+Route::delete('/status/{status}', [StatusController::class,'destroy'])->middleware('auth');
+// Route::resource('agama',AgamaController::class)->middleware('auth');
+ 
