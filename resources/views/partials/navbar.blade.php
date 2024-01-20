@@ -139,6 +139,10 @@
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
+
+           
+      {{--auth halaman--}}
+    @auth
       <a class="navbar-brand" href="/">
         <img src="https://djoealan.files.wordpress.com/2009/02/logo-uwp1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
         SIM kampus
@@ -180,6 +184,7 @@
               Referensi
             </button>
             <div class="dropdown-menu">
+<<<<<<< HEAD
               <a class="dropdown-item" href="agama">Agama</a>
               <a class="dropdown-item" href="periode">Periode</a>
               <a class="dropdown-item" href="unit">Unit</a>
@@ -189,6 +194,16 @@
           </div>
           @endauth
 
+=======
+              <a class="dropdown-item" href="/agama">Agama</a>
+              <a class="dropdown-item" href="/periode">Periode</a>
+              <a class="dropdown-item" href="/unit">Unit</a>
+              <a class="dropdown-item" href="/sistemkuliah">Sistem Kuliah</a>
+              <a class="dropdown-item" href="/statusmahasiswa">Status Mahasiswa</a>
+            </div>
+          </div>
+    @endauth
+>>>>>>> origin/dev_rosii
             <ul class="navbar-nav justify-content-end container-fluid">
                 @auth
 >>>>>>> origin/dev_bale

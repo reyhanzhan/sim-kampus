@@ -7,4 +7,9 @@
         <a href="/destroy-agama/{{$agama->slug}}" class="btn btn-danger me-2">Sure</a>
         <a href="/agama" class="btn btn-info">Cancel</a>
     </div>
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+    
+>>>>>>> origin/dev_rosii

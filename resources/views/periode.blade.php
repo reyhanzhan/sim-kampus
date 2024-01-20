@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @section('container')
 <div class="mt-5">
     <h1>Daftar Agama</h1>
@@ -62,4 +63,8 @@
     <h1>ini halaman Periode</h1>
 
 >>>>>>> origin/dev_bale
+=======
+@section('container')
+<h1>ini periode</h1>
+>>>>>>> origin/dev_rosii
 @endsection

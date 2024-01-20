@@ -1,6 +1,7 @@
 @extends('layouts.main')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 @section('container')
 <h1>hlmn unit</h1>
@@ -75,4 +76,9 @@
     <h1>ini halaman Unit</h1>
 
 >>>>>>> origin/dev_bale
+=======
+
+@section('container')
+<h1>ini unit</h1>
+>>>>>>> origin/dev_rosii
 @endsection

@@ -2,7 +2,11 @@
 
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\AgamaController;
+=======
+use App\Http\Controllers\agamaController;
+>>>>>>> origin/dev_rosii
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\rentlogcontroller;
 use App\Http\Controllers\RegisterController;
@@ -26,6 +30,7 @@ Route::get('/', function () {
 Route::get('/mahasiswa', function () {
     return view('mahasiswa');
 })->middleware('auth');
+<<<<<<< HEAD
 
 Route::get('/dosen', function () {
     return view('dosen');
@@ -50,6 +55,36 @@ Route::get('/semester', function () {
 Route::get('/agama', function () {
     return view('agama');
 });
+=======
+Route::get('/dosen', function () {
+    return view('dosen');
+})->middleware('auth');
+Route::get('/kelas', function () {
+    return view('kelas');
+})->middleware('auth');
+Route::get('/krs', function () {
+    return view('krs');
+})->middleware('auth');
+Route::get('/matkul', function () {
+    return view('matkul');
+})->middleware('auth');
+Route::get('/agama', function () {
+     return view('agama');
+})->middleware('auth');
+Route::get('/periode', function () {
+    return view('periode');
+})->middleware('auth');
+Route::get('/unit', function () {
+    return view('unit');
+})->middleware('auth');
+Route::get('/sistemkuliah', function () {
+    return view('sistemkuliah');
+})->middleware('auth');
+Route::get('/statusmahasiswa', function () {
+    return view('statusmahasiswa');
+})->middleware('auth');
+
+>>>>>>> origin/dev_rosii
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -63,6 +98,7 @@ Route::get('status', [rentlogcontroller::class, 'status']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
+<<<<<<< HEAD
 Route::post('/logout', [LoginController::class, 'logout']);
 
 
@@ -135,3 +171,14 @@ Route::put('/status/{status}', [StatusController::class,'update'])->middleware('
 Route::delete('/status/{status}', [StatusController::class,'destroy'])->middleware('auth');
 // Route::resource('agama',AgamaController::class)->middleware('auth');
  
+=======
+Route::get('agama', [agamaController::class, 'index']);
+Route::get('add-agama', [agamaController::class, 'add']);
+Route::post('add-agama', [agamaController::class, 'store']);
+Route::get('edit-agama/{slug}', [agamaController::class, 'edit']);
+Route::put('edit-agama/{slug}', [agamaController::class, 'update']);
+Route::get('delete-agama/{slug}', [agamaController::class, 'delete']);
+Route::get('destroy-agama/{slug}', [agamaController::class, 'destroy']);
+
+Route::post('/logout', [LoginController::class, 'logout']);
+>>>>>>> origin/dev_rosii
