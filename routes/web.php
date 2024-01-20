@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AgamaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\rentlogcontroller;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ReferensiController;
 use App\Http\Controllers\StatusController;
@@ -46,8 +47,18 @@ Route::get('/semester', function () {
     return view('semester');
 })->middleware('auth');
 
+Route::get('/agama', function () {
+    return view('agama');
+});
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('agama', [rentlogcontroller::class, 'agama']);
+Route::get('periode', [rentlogcontroller::class, 'periode']);
+Route::get('unit', [rentlogcontroller::class, 'unit']);
+Route::get('sistem', [rentlogcontroller::class, 'sistem']);
+Route::get('status', [rentlogcontroller::class, 'status']);
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);

@@ -57,6 +57,7 @@
             -webkit-background-size: cover;
             background-size: cover;
         }
+<<<<<<< HEAD
 
 >>>>>>> origin/dev_andyegh
 </style>
@@ -133,6 +134,64 @@
             @auth
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav justify-content-end container-fluid">
+=======
+        
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="https://djoealan.files.wordpress.com/2009/02/logo-uwp1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        SIM kampus
+      </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          @auth
+          <div class="dropdown ">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              Portal
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/mahasiswa">Mahasiswa</a>
+              <a class="dropdown-item" href="/dosen">Dosen</a>
+            </div>
+          </div>
+  
+          <div class="dropdown ">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              Perkuliahan
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/matkul">Mata Kuliah</a>
+              <a class="dropdown-item" href="/kelas">Kelas</a>
+            </div>
+          </div>
+  
+          <div class="dropdown ">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              Laporan
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/krs">Krs</a>
+              <a class="dropdown-item" href="/semester">Semester</a>
+            </div>
+          </div>
+
+          <div class="dropdown ">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              Referensi
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="agama">Agama</a>
+              <a class="dropdown-item" href="periode">Periode</a>
+              <a class="dropdown-item" href="unit">Unit</a>
+              <a class="dropdown-item" href="sistem">Sistem Kuliah</a>
+              <a class="dropdown-item" href="status">Status Mahasiswa</a>
+            </div>
+          </div>
+          @endauth
+
+            <ul class="navbar-nav justify-content-end container-fluid">
+                @auth
+>>>>>>> origin/dev_bale
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -146,7 +205,7 @@
                             <form action="/logout" method="POST">
                                 @csrf
                                 <button type="submit" class="dropdown-item"><i
-                                        class="bi bi-box-arrow-right"></i>Logout</button>
+                                        class="bi bi-box-arrow-right"></i>keluar</button>
                             </form>
 
                         </div>

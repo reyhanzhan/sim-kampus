@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+<<<<<<< HEAD
 @section('container')
 <<<<<<< HEAD
 <div class="mt-5">
@@ -50,4 +51,13 @@
 =======
 <h1>hlmn agama</h1>
 >>>>>>> origin/dev_andyegh
+=======
+@section('title', 'Dashboard')
+
+@section('container')
+
+    
+    <h1>ini halaman agama</h1>
+
+>>>>>>> origin/dev_bale
 @endsection

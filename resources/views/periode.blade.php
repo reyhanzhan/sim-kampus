@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+<<<<<<< HEAD
 @section('container')
 <div class="mt-5">
     <h1>Daftar Agama</h1>
@@ -52,4 +53,13 @@
         </table>
     </div>
     
+=======
+@section('title', 'Dashboard')
+
+@section('container')
+
+    
+    <h1>ini halaman Periode</h1>
+
+>>>>>>> origin/dev_bale
 @endsection
