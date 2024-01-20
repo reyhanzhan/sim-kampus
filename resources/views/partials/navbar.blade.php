@@ -5,6 +5,7 @@
         box-sizing: border-box;
     }
 
+<<<<<<< HEAD
     .form-registration {
         width: 500px;
         box-sizing: border-box;
@@ -30,10 +31,45 @@
         -webkit-background-size: cover;
         background-size: cover;
     }
+=======
+        .form-registration {
+            width: 500px;
+            box-sizing: border-box;
+            background: rgba(188, 255, 107, 0.592);
+            padding: 40px;
+            border-radius: 20px;
+            /* color: rgb(255, 238, 0); */
+        }
+
+        .form-signin {
+            width: 500px;
+            box-sizing: border-box;
+            background: rgba(188, 255, 107, 0.592);
+            padding: 40px;
+            border-radius: 20px;
+            /* color: rgb(255, 238, 0); */
+        }
+
+        .main {
+            /* height: 100vh; */
+            box-sizing: border-box;
+            background-image: url(background.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+
+>>>>>>> origin/dev_andyegh
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
 
+<<<<<<< HEAD
+=======
+      
+      
+
+
+>>>>>>> origin/dev_andyegh
             {{-- auth halaman --}}
             @auth
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -128,4 +164,8 @@
             </div>
             @endauth
     </div>
+<<<<<<< HEAD
 </nav>
+=======
+</nav>
+>>>>>>> origin/dev_andyegh

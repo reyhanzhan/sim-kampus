@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
+<<<<<<< HEAD
 <div class="mt-5">
     <h1>Daftar Agama</h1>
 </div>
@@ -46,4 +47,7 @@
         </table>
     </div>
     
+=======
+<h1>hlmn agama</h1>
+>>>>>>> origin/dev_andyegh
 @endsection
