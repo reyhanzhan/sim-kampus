@@ -68,30 +68,30 @@ Route::get('/status', [ReferensiController::class, 'status'])->middleware('auth'
  * CRUD hlmn agama
  * pakai query builder
  */
-Route::get('/agama/tampil', [AgamaController::class, 'index'])->middleware('auth');
-// create data
-// menuju ke form tambah data
-Route::get('/agama/tampil', [AgamaController::class,'create'])->middleware('auth');
+// Route::get('/agama/tampil', [AgamaController::class, 'index'])->middleware('auth');
+// // create data
+// // menuju ke form tambah data
+// Route::get('/agama/tampil', [AgamaController::class,'create'])->middleware('auth');
 
-// masukkan data ke db
-Route::post('/agama/tampil',[AgamaController::class, 'store'])->middleware('auth');
+// // masukkan data ke db
+// Route::post('/agama/tampil',[AgamaController::class, 'store'])->middleware('auth');
 
-// read data
-Route::get('/agama',[AgamaController::class,'tampil'])->middleware('auth');
+// // read data
+// Route::get('/agama',[AgamaController::class,'tampil'])->middleware('auth');
 
-// detail data berdasarkan id param
-Route::get('/agama/{id}',[AgamaController::class,'show'])->middleware('auth');
+// // detail data berdasarkan id param
+// Route::get('/agama/{id}',[AgamaController::class,'show'])->middleware('auth');
 
-// edit data
-Route::get('/agama{id}/edit', [AgamaController::class,'edit'])->middleware('auth');
+// // edit data
+// Route::get('/agama{id}/edit', [AgamaController::class,'edit'])->middleware('auth');
 
-// update data di db berdasarkan id
+// // update data di db berdasarkan id
 
-Route::put('/agama/{id}', [AgamaController::class,'update'])->middleware('auth');
+// Route::put('/agama/{id}', [AgamaController::class,'update'])->middleware('auth');
 
-// delete data
-Route::delete('/agama/{id}', [AgamaController::class,'destroy'])->middleware('auth');
-// Route::resource('agama',AgamaController::class)->middleware('auth');
+// // delete data
+// Route::delete('/agama/{id}', [AgamaController::class,'destroy'])->middleware('auth');
+// // Route::resource('agama',AgamaController::class)->middleware('auth');
 
 
 
