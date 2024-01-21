@@ -21,11 +21,6 @@ class rentlogcontroller extends Controller
         return view('unit');
     }
 
-    function sistem() 
-    {
-        return view('sistem');
-    }
-
     function status() 
     {
         return view('status');

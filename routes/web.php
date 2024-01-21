@@ -3,7 +3,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\sistemController;
 use App\Http\Controllers\rentlogcontroller;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -37,7 +39,9 @@ Route::get('/matkul', function () {
 Route::get('/semester', function () {
     return view('semester');
 });
-
+Route::get('/sistem', function () {
+    return view('sistem');
+});
 Route::get('/agama', function () {
     return view('agama');
 });
@@ -55,3 +59,13 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/category', [CategoryController::class, 'index']);
+// Route::get('category-add', [CategoryController::class, 'add']);
+// Route::post('category-add', [CategoryController::class, 'store']);
+// Route::get('category-edit/{slug}', [CategoryController::class, 'edit']);
+// Route::put('category-edit/{slug}', [CategoryController::class, 'update']);
+// Route::get('category-delete/{slug}', [CategoryController::class, 'delete']);
+// Route::get('category-destroy/{slug}',[CategoryController::class, 'destroy']);
+// Route::get('category-deleted', [CategoryController::class, 'deletedcategory']);
+// Route::get('category-restore/{slug}', [CategoryController::class, 'restore']);
